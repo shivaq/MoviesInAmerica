@@ -16,7 +16,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
+    dataBinding.enabled = true
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -26,28 +26,15 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-
-    // workaround for DexIndexOverflowException
-
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
     // デフォルトで使うものども
-
     // android support libraries
-    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:design:$rootProject.supportLibraryVersion"
-    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-    compile "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion"
-    compile "com.android.support:support-v4:$rootProject.supportLibraryVersion"
-    compile "com.android.support:animated-vector-drawable:$rootProject.supportLibraryVersion"
-    compile "com.android.support:support-v13:$rootProject.supportLibraryVersion"
-
-
-    // life cycle components
-    implementation 'android.arch.lifecycle:runtime:1.0.3'
-    annotationProcessor "android.arch.lifecycle:compiler:1.0.0"
-    implementation 'android.arch.lifecycle:common-java8:1.0.0'
-    implementation 'android.arch.lifecycle:extensions:1.0.0'
+    implementation "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion"
+    implementation "com.android.support:animated-vector-drawable:$rootProject.supportLibraryVersion"
 
     // database
     compile "com.facebook.stetho:stetho:$rootProject.stethoVersion"
@@ -56,15 +43,35 @@ dependencies {
     // dependency injection
     compile "com.google.dagger:dagger:$rootProject.dagger2Version"
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
+    compile "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
 
-    // date format
-    compile "com.jakewharton.threetenabp:threetenabp:$rootProject.threetenabpVersion"
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile 'javax.inject:javax.inject:1'
+
+    // room
+    implementation "android.arch.persistence.room:runtime:$rootProject.arcitectureComponentsVersion"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.arcitectureComponentsVersion"
+    compile "android.arch.lifecycle:runtime:$rootProject.arcitectureComponentsVersion"
+    compile "android.arch.lifecycle:extensions:$rootProject.arcitectureComponentsVersion"
+    annotationProcessor "android.arch.lifecycle:compiler:$rootProject.arcitectureComponentsVersion"
+    testImplementation "android.arch.core:core-testing:$rootProject.arcitectureComponentsVersion"
+
+    // database
+    compile "com.facebook.stetho:stetho:$rootProject.stethoVersion"
+    compile "com.facebook.stetho:stetho-okhttp3:$rootProject.stethoVersion"
 
     // rx
     compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid2Version"
 
     // explicitly depend on RxJava's latest version for bug fixes and new features.
     compile "io.reactivex.rxjava2:rxjava:$rootProject.rxJava2Version"
+
+    // constraint layout
+    implementation "com.android.support.constraint:constraint-layout:$rootProject.constraintLayoutVersion"
+
+    // date format
+    compile "com.jakewharton.threetenabp:threetenabp:$rootProject.threetenabpVersion"
 
     // gson2
     compile "com.google.code.gson:gson:$rootProject.gsonVersion"
@@ -90,6 +97,9 @@ dependencies {
     testCompile "org.robolectric:robolectric:$rootProject.robolectricVersion"
     testCompile "org.robolectric:shadows-multidex:$rootProject.robolectricVersion"
     testAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+
+    // Logger
+    compile "com.jakewharton.timber:timber:$rootProject.timberVersion"
 
     // ui test
     androidTestCompile "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"

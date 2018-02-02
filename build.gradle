@@ -45,15 +45,16 @@ ext {
 
     // database
     stethoVersion = '1.5.0'
+    // room
+    arcitectureComponentsVersion = '1.0.0'
 
     // autovalue
     autoValueVersion = '1.4.1'
     autoValueParcelVersion = '0.2.5'
     javaxAnnotationApiVersion = '1.0'
 
-
     // dependency injection
-    dagger2Version = '2.10'
+    dagger2Version = '2.11'
     // date format
     threetenabpVersion = '1.0.5'
     // rx
