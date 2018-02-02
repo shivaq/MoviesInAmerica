@@ -1,6 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <color name="colorPrimary">#3F51B5</color>
-  <color name="colorPrimaryDark">#303F9F</color>
-  <color name="colorAccent">#FF4081</color>
+  <color name="white">#FFFFFF</color>
+  <color name="black">#000000</color>
+  <color name="almost_black">#333333</color>
+  <color name="grey">#BCBCBC</color>
+  <color name="grey_z03">#333333</color>
+  <!--<color name="ltgray">#333333</color>-->
+
+  <color name="colorPrimary">@color/light_blue07</color>
+  <color name="colorPrimaryDark">@color/black05</color>
+  <color name="colorPrimaryLight">@color/light_blue07</color>
+  <color name="colorAccent">@color/red02</color>
+
+  <color name="transparent">#00000000</color>
+  <color name="transparent2">#E6081325</color>
+  <color name="transparent3">#F2000000</color>
+  <color name="transparent_select">#4D2A2B2D</color>
+  <color name="card_transparent">#BF003E81</color>
+  <color name="card_title_transparent">#BF001029</color>
+
+
+
+  <color name="keyboard_back">@color/red07</color>
+
+  <!-- new colors ///////////////////////////////////-->
+  <color name="background_dark">@color/black05</color>
+  <color name="background_white">@color/white01</color>
+  <color name="text_white">@color/white05</color>
+  <color name="text_attention">@color/yellow04</color>
+  <color name="text_attention_red">@color/red05</color>
+  <color name="text_grey">@color/grey</color>
+
+
+  <!-- colors for bases-->
+  <color name="white05">#F7F0C4</color>
+  <color name="red07">#F1372C</color>
+  <color name="red09">#C74B54</color>
+  <color name="purple03">#380833</color>
+  <color name="pink05">#FB756C</color>
+  <color name="light_blue07">#0095A1</color>
+  <color name="deep_blue07">#114048</color>
+  <color name="silver">#BABFC6</color>
+  <color name="bronze">#EA6A68</color>
+
+  <!--Kind of white -->
+  <color name="white01">#F8F5E3</color>
+  <color name="white02">#F2ECD6</color>
+  <color name="white03">#E8E4D7</color>
+  <color name="white04">#FFF8E1</color>
+  <color name="white07">#FAE8BC</color>
+  <color name="white08">#F9F4B2</color>
+  <color name="white09">#C5B298</color>
+  <color name="white10">#F9E7D1</color>
+
+  <color name="grey01">#CCCCCC</color>
+  <color name="grey02">#646464</color>
+
+  <!--Kind of black -->
+  <color name="black01">#250804</color>
+  <color name="black02">#0B0001</color>
+  <color name="black03">#140718</color>
+  <color name="black04">#2A2B2D</color>
+  <color name="black05">#0A0C0E</color>
+  <color name="black06">#020202</color>
+  <color name="black07">@color/almost_black</color>
+
+  <!--Kind of pink -->
+  <color name="pink01">#FFE0E0</color>
+  <color name="pink02">#F2C7E2</color>
+  <color name="pink03">#FABCB0</color>
+  <color name="pink04">#F5CAAB</color>
+  <color name="pink06">#FFB395</color>
+  <color name="pink07">#FB8993</color>
+  <color name="pink08">#F6628E</color>
+  <color name="pink09">#FD635B</color>
+
+  <!--Kind of red -->
+  <color name="red01">#FA3C1B</color>
+  <color name="red02">#E53730</color>
+  <color name="red03">#D34241</color>
+  <color name="red04">#EB2643</color>
+  <color name="red05">#9A0A0E</color>
+  <color name="red06">#BA132F</color>
+
+  <!--Kind of purple -->
+  <color name="purple01">#E72845</color>
+  <color name="purple02">#DD0057</color>
+  <color name="purple04">#C2185B</color>
+  <color name="purple05">#880E4F</color>
+  <color name="purple06">#6C021B</color>
+  <color name="purple07">#6B183B</color>
+  <color name="purple08">#2A0A2F</color>
+
+  <!--Kind of yellow -->
+  <color name="yellow01">#FFF176</color>
+  <color name="yellow02">#FFD56D</color>
+  <color name="yellow03">#F8DB01</color>
+  <color name="yellow04">#FFC822</color>
+  <color name="yellow05">#DDB43C</color>
+  <color name="yellow06">#E0942E</color>
+  <color name="yellow07">#FFB539</color>
+  <color name="yellow08">#F69136</color>
+  <color name="yellow09">#FA7727</color>
+
+
+
+  <!--Kind of light_green -->
+  <color name="light_green01">#CFD41E</color>
+  <color name="light_green02">#58AB19</color>
+  <color name="light_green03">#96E465</color>
+  <color name="light_green04">#18DFA6</color>
+  <color name="light_green05">#989A2C</color>
+  <color name="light_green06">#4C5B38</color>
+  <color name="light_green07">#4F7647</color>
+  <color name="light_green08">#3F3419</color>
+
+  <!--Kind of deep_green -->
+  <color name="deep_green01">#4EAF97</color>
+  <color name="deep_green02">#28A499</color>
+  <color name="deep_green03">#009080</color>
+  <color name="deep_green04">#006767</color>
+  <color name="deep_green05">#005D41</color>
+  <color name="deep_green06">#063B39</color>
+  <color name="deep_green07">#052B19</color>
+
+  <!--Kind of light_blue -->
+  <color name="light_blue01">#4DD0E1</color>
+  <color name="light_blue02">#3AB2D4</color>
+  <color name="light_blue03">#00B9C9</color>
+  <color name="light_blue04">#329DB8</color>
+  <color name="light_blue05">#1BAFB7</color>
+  <color name="light_blue06">#009AC6</color>
+  <color name="light_blue08">#0097A7</color>
+  <color name="light_blue09">#008390</color>
+  <color name="light_blue10">#0265A7</color>
+  <color name="light_blue11">#006C8F</color>
+
+  <!--Kind of deep_blue -->
+  <color name="deep_blue01">#125061</color>
+  <color name="deep_blue02">#00273C</color>
+  <color name="deep_blue03">#001722</color>
+  <color name="deep_blue04">#10272A</color>
+  <color name="deep_blue05">#112452</color>
+  <color name="deep_blue06">#06062C</color>
 </resources>

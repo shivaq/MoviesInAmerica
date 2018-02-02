@@ -15,7 +15,7 @@ import timber.log.Timber;
 public class MyApplication extends Application implements HasActivityInjector {
 
   @Inject
-  DispatchingAndroidInjector<Activity> activityDispatchingAndroidInjector;
+  DispatchingAndroidInjector<Activity> dispatchingAndroidInjector;
 
   @Override
   public void onCreate() {
@@ -46,6 +46,6 @@ public class MyApplication extends Application implements HasActivityInjector {
 
   @Override
   public DispatchingAndroidInjector<Activity> activityInjector() {
-    return activityDispatchingAndroidInjector;
+    return dispatchingAndroidInjector;
   }
 }

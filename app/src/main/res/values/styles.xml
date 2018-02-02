@@ -8,4 +8,10 @@
     <item name="colorAccent">@color/colorAccent</item>
   </style>
 
+  <style name="tv_base">
+    <item name="android:fontFamily">sans-serif</item>
+    <item name="android:textColor">@color/almost_black</item>
+    <item name="android:textSize">@dimen/text_size_medium</item>
+    <item name="android:lineSpacingMultiplier">@dimen/line_space_multiply_body_1_spacing</item>
+  </style>
 </resources>

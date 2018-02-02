@@ -1,33 +1,24 @@
 package banbutsu.kyoto.com.moviesinamerica.ui;
 
-import android.arch.lifecycle.ViewModelProvider;
-import android.arch.lifecycle.ViewModelProviders;
-import android.content.Context;
-import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import banbutsu.kyoto.com.moviesinamerica.R;
-import banbutsu.kyoto.com.moviesinamerica.databinding.ActivityMainBinding;
-import javax.inject.Inject;
 
 public class MainActivity extends BaseActivity {
 
-  @Inject
-  Context context;
-  public MainActivity() {
-  }
 
-  @Inject
-  ViewModelProvider.Factory viewModelFactory;
-  private MainViewModel viewModel;
-  private ActivityMainBinding binding;
-
-  ///////////////////////////  ライフサイクル達   /////////////////////////////////
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+    setContentView(R.layout.activity_main);
+    if (savedInstanceState == null) {
+      setFragment();
+    }
+  }
 
-    viewModel = ViewModelProviders.of(this, viewModelFactory).get(MainViewModel.class);
-
+  private void setFragment() {
+    FragmentManager manager = getSupportFragmentManager();
+    manager.beginTransaction().add(R.id.main_container, MainFragment.newInstance())
+        .commit();
   }
 }
