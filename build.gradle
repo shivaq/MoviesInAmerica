@@ -25,3 +25,48 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext {
+    // android support libraries
+    supportLibraryVersion = '26.1.0'
+
+    // logger
+    timberVersion = '4.5.1'
+    // unit test
+    junitVersion = '4.12'
+    assertJ = '2.6.0'
+    mockitoVersion = '2.7.22'
+    dexmakerVersion = '1.2'
+//    dexmakerVersion = '1.4'
+    robolectricVersion = '3.3.2'
+    // ui test
+    espressoVersion = '2.2.2'
+    // Android Testing Support Library's runner and rules
+    runnerVersion = '0.5'
+
+    // database
+    stethoVersion = '1.5.0'
+
+    // autovalue
+    autoValueVersion = '1.4.1'
+    autoValueParcelVersion = '0.2.5'
+    javaxAnnotationApiVersion = '1.0'
+
+
+    // dependency injection
+    dagger2Version = '2.10'
+    // date format
+    threetenabpVersion = '1.0.5'
+    // rx
+    rxAndroid2Version = '2.0.1'
+    rxJava2Version = '2.1.1'
+
+    // network
+    gsonVersion = '2.8.1'
+    autoValueGsonVersion = '0.5.0'
+    retrofit2Version = '2.3.0'
+    okhttpVersion = '3.8.1'
+
+    // constraint layout
+    constraintLayoutVersion = '1.0.2'
+
+}
